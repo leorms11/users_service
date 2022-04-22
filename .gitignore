@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+
+.env
+
+.vscode/
+.idea/
+
+src/config/dataSourceConfig.ts
