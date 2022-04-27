@@ -28,6 +28,18 @@ class RolesRepositoryInMemory implements IRolesRepository {
 
     return role ?? null;
   }
+
+  async findByIds(ids: string[]): Promise<Role[]> {
+    const findedRoles: Role[] = [];
+
+    this.roles.forEach((role) => {
+      if (ids.includes(role.id!)) {
+        findedRoles.push(role);
+      }
+    });
+
+    return findedRoles;
+  }
 }
 
 export { RolesRepositoryInMemory };

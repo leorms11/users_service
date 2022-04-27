@@ -1,4 +1,4 @@
-import { UserRepositoyInMemory } from "@modules/user/repositories/in-memory/UserRepositoyInMemory";
+import { UsersRepositoyInMemory } from "@modules/user/repositories/in-memory/UsersRepositoyInMemory";
 import { IUsersRepository } from "@modules/user/repositories/IUsersRepository";
 
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
@@ -8,7 +8,7 @@ let createUserUseCase: CreateUserUseCase;
 
 describe("Create User", () => {
   beforeAll(async () => {
-    usersRepository = UserRepositoyInMemory.getInstance();
+    usersRepository = UsersRepositoyInMemory.getInstance();
     await usersRepository.create({
       firstName: "Existent",
       lastName: "User",

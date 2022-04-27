@@ -1,4 +1,4 @@
-import { UserRepositoyInMemory } from "@modules/user/repositories/in-memory/UserRepositoyInMemory";
+import { UsersRepositoyInMemory } from "@modules/user/repositories/in-memory/UsersRepositoyInMemory";
 import { IUsersRepository } from "@modules/user/repositories/IUsersRepository";
 
 import { AuthUserUseCase } from "../authUser/AuthUserUseCase";
@@ -8,7 +8,7 @@ let usersRepository: IUsersRepository;
 
 describe("Authenticate User", () => {
   beforeAll(async () => {
-    usersRepository = UserRepositoyInMemory.getInstance();
+    usersRepository = UsersRepositoyInMemory.getInstance();
     usersRepository.create({
       firstName: "User",
       lastName: "Test",
